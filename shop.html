@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Shop - Coffee Store</title>
+</head>
+<body>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="closeCart" aria-label="Close cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <p class="cart-total">Total: <span id="cartTotal">$0.00</span></p>
+            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+
+    <header class="hero shop-hero">
+        <div class="navbar">
+            <p>Coffee</p>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="nav-link" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Coffee</a></li>
+                    <li><a href="menu.html#bakery">Bakery</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-icons">
+                <i class="fa-solid fa-magnifying-glass search-icon"><input placeholder="Search the shop" type="search" id="searchInput"></i>
+                <button class="cart-icon-btn" id="cartToggle" aria-label="Open cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+        <div class="header-container">
+            <div class="hdr-container-inner">
+                <p>The Shop</p>
+                <h2>Gear, gifts, and beans to take home.</h2>
+            </div>
+        </div>
+    </header>
+
+    <div class="shop-tabs">
+        <button class="tab-btn active" data-tab="all">All</button>
+        <button class="tab-btn" data-tab="beans">Beans</button>
+        <button class="tab-btn" data-tab="gear">Brew Gear</button>
+        <button class="tab-btn" data-tab="merch">Merch</button>
+    </div>
+
+    <section class="shop-page">
+        <div class="shop-grid" id="shopGrid">
+            <div class="drink reveal" data-category="beans">
+                <img src="https://caffecorsini.com/cdn/shop/articles/immagine_le_differenze_arabica_e_robusta.jpg?v=1695982872&width=2048" alt="Arabica beans">
+                <div class="drink-info">
+                    <h4 class="title">Arabica - 250g</h4>
+                    <p class="price">$8.50</p>
+                    <button class="drink-btn add-to-cart" data-name="Arabica Beans - 250g" data-price="8.50" data-img="https://caffecorsini.com/cdn/shop/articles/immagine_le_differenze_arabica_e_robusta.jpg?v=1695982872&width=2048">Add to cart</button>
+                </div>
+            </div>
+            <div class="drink reveal" data-category="beans">
+                <img src="https://espresso-works.com/cdn/shop/articles/espresso-works-blog-coffee-101-robusta-coffee-1_1081x.jpg?v=1681280369" alt="Robusta beans">
+                <div class="drink-info">
+                    <h4 class="title">Robusta - 250g</h4>
+                    <p class="price">$6.50</p>
+                    <button class="drink-btn add-to-cart" data-name="Robusta Beans - 250g" data-price="6.50" data-img="https://espresso-works.com/cdn/shop/articles/espresso-works-blog-coffee-101-robusta-coffee-1_1081x.jpg?v=1681280369">Add to cart</button>
+                </div>
+            </div>
+            <div class="drink reveal" data-category="beans">
+                <img src="https://cdn.shopify.com/s/files/1/0720/9117/3171/files/Liberica-coffee-Beans.jpg?v=1694540679" alt="Liberica beans">
+                <div class="drink-info">
+                    <h4 class="title">Liberica - 250g</h4>
+                    <p class="price">$9.00</p>
+                    <button class="drink-btn add-to-cart" data-name="Liberica Beans - 250g" data-price="9.00" data-img="https://cdn.shopify.com/s/files/1/0720/9117/3171/files/Liberica-coffee-Beans.jpg?v=1694540679">Add to cart</button>
+                </div>
+            </div>
+            <div class="drink reveal" data-category="gear">
+                <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=500&q=80" alt="French Press">
+                <div class="drink-info">
+                    <h4 class="title">French Press</h4>
+                    <p class="price">$24.00</p>
+                    <button class="drink-btn add-to-cart" data-name="French Press" data-price="24.00" data-img="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=500&q=80">Add to cart</button>
+                </div>
+            </div>
+            <div class="drink reveal" data-category="gear">
+                <img src="https://images.unsplash.com/photo-1558122104-6f2755c4a6b5?auto=format&fit=crop&w=500&q=80" alt="Pour Over Set">
+                <div class="drink-info">
+                    <h4 class="title">Pour-Over Set</h4>
+                    <p class="price">$19.50</p>
+                    <button class="drink-btn add-to-cart" data-name="Pour-Over Set" data-price="19.50" data-img="https://images.unsplash.com/photo-1558122104-6f2755c4a6b5?auto=format&fit=crop&w=500&q=80">Add to cart</button>
+                </div>
+            </div>
+            <div class="drink reveal" data-category="gear">
+                <img src="https://images.unsplash.com/photo-1516315720917-231ef9acce9b?auto=format&fit=crop&w=500&q=80" alt="Manual grinder">
+                <div class="drink-info">
+                    <h4 class="title">Manual Grinder</h4>
+                    <p class="price">$32.00</p>
+                    <button class="drink-btn add-to-cart" data-name="Manual Grinder" data-price="32.00" data-img="https://images.unsplash.com/photo-1516315720917-231ef9acce9b?auto=format&fit=crop&w=500&q=80">Add to cart</button>
+                </div>
+            </div>
+            <div class="drink reveal" data-category="merch">
+                <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=500&q=80" alt="Ceramic mug">
+                <div class="drink-info">
+                    <h4 class="title">Ceramic Mug</h4>
+                    <p class="price">$12.00</p>
+                    <button class="drink-btn add-to-cart" data-name="Ceramic Mug" data-price="12.00" data-img="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=500&q=80">Add to cart</button>
+                </div>
+            </div>
+            <div class="drink reveal" data-category="merch">
+                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=500&q=80" alt="Travel tumbler">
+                <div class="drink-info">
+                    <h4 class="title">Travel Tumbler</h4>
+                    <p class="price">$18.00</p>
+                    <button class="drink-btn add-to-cart" data-name="Travel Tumbler" data-price="18.00" data-img="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=500&q=80">Add to cart</button>
+                </div>
+            </div>
+            <div class="drink reveal" data-category="merch">
+                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=500&q=80" alt="Canvas tote bag">
+                <div class="drink-info">
+                    <h4 class="title">Canvas Tote Bag</h4>
+                    <p class="price">$9.00</p>
+                    <button class="drink-btn add-to-cart" data-name="Canvas Tote Bag" data-price="9.00" data-img="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=500&q=80">Add to cart</button>
+                </div>
+            </div>
+        </div>
+        <p class="no-results" id="noResults" hidden>No items match your search.</p>
+    </section>
+
+    <footer>
+        <div class="footer-col">
+            <h4>PRIVACY</h4>
+            <ul>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Privacy and policy</a></li>
+                <li><a href="#">Cookie</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>SERVICES</h4>
+            <ul>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Order ahead</a></li>
+                <li><a href="menu.html">Menu</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>ABOUT US</h4>
+            <ul>
+                <li><a href="#">Find a location</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="about.html">Our story</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>INFORMATION</h4>
+            <ul>
+                <li><a href="#">Plan & pricing</a></li>
+                <li><a href="#">Sell your product</a></li>
+                <li><a href="#">Job</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>SOCIAL MEDIA</h4>
+            <div class="link">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

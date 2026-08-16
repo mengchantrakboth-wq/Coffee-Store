@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Coffee Store</title>
+    <title>Menu - Coffee Store</title>
 </head>
 <body>
     <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
@@ -30,7 +30,7 @@
 
     <div class="toast" id="toast"></div>
 
-    <header class="hero">
+    <header class="hero menu-hero">
         <div class="navbar">
             <p>Coffee</p>
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -38,8 +38,8 @@
             </button>
             <nav class="nav-link" id="navLinks">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="menu.html">Coffee</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html" class="active">Coffee</a></li>
                     <li><a href="menu.html#bakery">Bakery</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="about.html">About</a></li>
@@ -47,7 +47,7 @@
                 </ul>
             </nav>
             <div class="navbar-icons">
-                <i class="fa-solid fa-magnifying-glass search-icon"><input placeholder="Search your type" type="search" id="searchInput"></i>
+                <i class="fa-solid fa-magnifying-glass search-icon"><input placeholder="Search the menu" type="search" id="searchInput"></i>
                 <button class="cart-icon-btn" id="cartToggle" aria-label="Open cart">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span class="cart-count" id="cartCount">0</span>
@@ -56,79 +56,14 @@
         </div>
         <div class="header-container">
             <div class="hdr-container-inner">
-                <p>Welcome!</p>
-                <h2>We serve the richest coffee in the city!</h2>
-                <a href="menu.html">Check</a>
+                <p>Our Menu</p>
+                <h2>Every bean, every brew, in one place.</h2>
             </div>
         </div>
     </header>
-    <h1 class="bean"><center>Our Top 4 Bean Coffee </center></h1>
-    <div class="item-group">
-        <div class="item reveal">
-            <img src="https://caffecorsini.com/cdn/shop/articles/immagine_le_differenze_arabica_e_robusta.jpg?v=1695982872&width=2048" alt="Arabica">
-            <div class="layer"></div>
-            <div class="info">
-                <h2>1.Arabica (Coffea arabica)</h2>
-                <ul>
-                    <li>Flavor: Smooth, mild, often slightly sweet with hints of fruit, chocolate, or nuts.</li>
-                    <li>Caffeine: Lower than other types (~1.2%)</li>
-                    <li>Growing altitude: High altitudes (600–2,000 meters)</li>
-                    <li>Climate: Cooler tropical climates</li>
-                    <li>Notes: Most popular type (about 60–70% of global production), higher quality, more expensive.</li>
-                </ul>
-                <button class="add-to-cart" data-name="Arabica Beans - 250g" data-price="8.50" data-img="https://caffecorsini.com/cdn/shop/articles/immagine_le_differenze_arabica_e_robusta.jpg?v=1695982872&width=2048">Buy Now...!</button>
-            </div>
-        </div>
 
-        <div class="item reveal">
-            <img src="https://espresso-works.com/cdn/shop/articles/espresso-works-blog-coffee-101-robusta-coffee-1_1081x.jpg?v=1681280369" alt="Robusta">
-            <div class="layer"></div>
-            <div class="info">
-                <h2>2. Robusta (Coffea canephora)</h2>
-                <ul>
-                    <li>Flavor: Strong, bitter, earthy, sometimes with a nutty or burnt rubber taste.</li>
-                    <li>Caffeine: Higher (~2.2%)</li>
-                    <li>Growing altitude: Lower elevations (sea level to 800 meters)</li>
-                    <li>Climate: Hotter, more resistant to pests and diseases</li>
-                    <li>Notes: Cheaper to grow, used in instant coffee or espresso blends for extra "kick" and crema.</li>
-                </ul>
-                <button class="add-to-cart" data-name="Robusta Beans - 250g" data-price="6.50" data-img="https://espresso-works.com/cdn/shop/articles/espresso-works-blog-coffee-101-robusta-coffee-1_1081x.jpg?v=1681280369">Buy Now...!</button>
-            </div>
-        </div>
-        <div class="item reveal">
-            <img src="https://cdn.shopify.com/s/files/1/0720/9117/3171/files/Liberica-coffee-Beans.jpg?v=1694540679" alt="liberica">
-            <div class="layer"></div>
-            <div class="info">
-                <h2>3. Liberica (Coffea liberica)</h2>
-                <ul>
-                    <li>Flavor: Woody, smoky, floral, bold, with a unique aftertaste.</li>
-                    <li>Caffeine: Medium (~1.2–1.5%)</li>
-                    <li>Growing altitude: Low to medium</li>
-                    <li>Climate:Grows well in Southeast Asia and the Philippines</li>
-                    <li>Notes: Large, irregular-shaped beans; not as common, but gaining niche interest.</li>
-                </ul>
-                <button class="add-to-cart" data-name="Liberica Beans - 250g" data-price="9.00" data-img="https://cdn.shopify.com/s/files/1/0720/9117/3171/files/Liberica-coffee-Beans.jpg?v=1694540679">Buy Now...!</button>
-            </div>
-        </div>
-        <div class="item reveal">
-            <img src="https://cdn.shopify.com/s/files/1/0720/9117/3171/files/Excelsa-coffee-Beans.jpg?v=1694540678" alt="Excelsa">
-            <div class="layer"></div>
-            <div class="info">
-                <h2>4. Excelsa (Coffea excelsa)</h2>
-                <ul>
-                    <li>Flavor: Tart, fruity, complex, and often used to add depth to blends.</li>
-                    <li>Caffeine:Similar to Arabica</li>
-                    <li>Growing altitude: Medium to high</li>
-                    <li>Climate:Southeast Asia</li>
-                    <li>Notes: Technically a variety of Liberica, but often classified separately due to its distinct taste.</li>
-                </ul>
-                <button class="add-to-cart" data-name="Excelsa Beans - 250g" data-price="9.50" data-img="https://cdn.shopify.com/s/files/1/0720/9117/3171/files/Excelsa-coffee-Beans.jpg?v=1694540678">Buy Now...!</button>
-            </div>
-        </div>
-    </div>
-    <!-- Our Drink Sale -->
-    <section>
-        <h1>Our Drink Sale</h1>
+    <section class="menu-page" id="bakery">
+        <h1>Full Coffee Menu</h1>
         <div class="all-drink">
             <div class="drink reveal">
                 <img src="https://i.pinimg.com/1200x/f8/56/d2/f856d2d30045e34f7a3d7438d81c5141.jpg" alt="Hot Latte">
@@ -141,7 +76,7 @@
             <div class="drink reveal">
                 <img src="https://www.brighteyedbaker.com/wp-content/uploads/2024/03/Iced-Spanish-Latte-Recipe.jpg" alt="Ice latte">
                 <div class="drink-info">
-                    <h4 class="title">Ice latte</h4>
+                    <h4 class="title">Ice Latte</h4>
                     <p class="price">$2.00</p>
                     <button class="drink-btn add-to-cart" data-name="Ice Latte" data-price="2.00" data-img="https://www.brighteyedbaker.com/wp-content/uploads/2024/03/Iced-Spanish-Latte-Recipe.jpg">Add to cart</button>
                 </div>
@@ -197,38 +132,46 @@
         </div>
     </section>
 
-    <section class="testimonials">
-        <h1>What Our Customers Say</h1>
-        <div class="testimonial-group">
-            <div class="testimonial reveal">
-                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                <p>"Best latte I've had in the city. The staff always remembers my order!"</p>
-                <h5>— Dara P.</h5>
+    <section class="menu-page">
+        <h1>Beans by the Bag</h1>
+        <div class="all-drink">
+            <div class="drink reveal">
+                <img src="https://caffecorsini.com/cdn/shop/articles/immagine_le_differenze_arabica_e_robusta.jpg?v=1695982872&width=2048" alt="Arabica beans">
+                <div class="drink-info">
+                    <h4 class="title">Arabica - 250g</h4>
+                    <p class="price">$8.50</p>
+                    <button class="drink-btn add-to-cart" data-name="Arabica Beans - 250g" data-price="8.50" data-img="https://caffecorsini.com/cdn/shop/articles/immagine_le_differenze_arabica_e_robusta.jpg?v=1695982872&width=2048">Add to cart</button>
+                </div>
             </div>
-            <div class="testimonial reveal">
-                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
-                <p>"Love the Liberica Mocha, it's not something you find everywhere. Cozy spot too."</p>
-                <h5>— Sophea K.</h5>
+            <div class="drink reveal">
+                <img src="https://espresso-works.com/cdn/shop/articles/espresso-works-blog-coffee-101-robusta-coffee-1_1081x.jpg?v=1681280369" alt="Robusta beans">
+                <div class="drink-info">
+                    <h4 class="title">Robusta - 250g</h4>
+                    <p class="price">$6.50</p>
+                    <button class="drink-btn add-to-cart" data-name="Robusta Beans - 250g" data-price="6.50" data-img="https://espresso-works.com/cdn/shop/articles/espresso-works-blog-coffee-101-robusta-coffee-1_1081x.jpg?v=1681280369">Add to cart</button>
+                </div>
             </div>
-            <div class="testimonial reveal">
-                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                <p>"Ordering ahead through the shop page saved me so much time before class."</p>
-                <h5>— Ratanak V.</h5>
+            <div class="drink reveal">
+                <img src="https://cdn.shopify.com/s/files/1/0720/9117/3171/files/Liberica-coffee-Beans.jpg?v=1694540679" alt="Liberica beans">
+                <div class="drink-info">
+                    <h4 class="title">Liberica - 250g</h4>
+                    <p class="price">$9.00</p>
+                    <button class="drink-btn add-to-cart" data-name="Liberica Beans - 250g" data-price="9.00" data-img="https://cdn.shopify.com/s/files/1/0720/9117/3171/files/Liberica-coffee-Beans.jpg?v=1694540679">Add to cart</button>
+                </div>
+            </div>
+            <div class="drink reveal">
+                <img src="https://cdn.shopify.com/s/files/1/0720/9117/3171/files/Excelsa-coffee-Beans.jpg?v=1694540678" alt="Excelsa beans">
+                <div class="drink-info">
+                    <h4 class="title">Excelsa - 250g</h4>
+                    <p class="price">$9.50</p>
+                    <button class="drink-btn add-to-cart" data-name="Excelsa Beans - 250g" data-price="9.50" data-img="https://cdn.shopify.com/s/files/1/0720/9117/3171/files/Excelsa-coffee-Beans.jpg?v=1694540678">Add to cart</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="subcribe">
-        <div class="sub-info">
-            <h3>Join in and get 15% OFF!</h3>
-            <p>Subscribe to our newsletter and get a 15% off discount code</p>
-            <form id="newsletterForm" class="newsletter-form" novalidate>
-                <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-            <p class="newsletter-message" id="newsletterMessage"></p>
-        </div>
-    </section>
+    <p class="no-results" id="noResults" hidden>No items match your search.</p>
+
     <footer>
         <div class="footer-col">
             <h4>PRIVACY</h4>

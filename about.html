@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>About Us - Coffee Store</title>
+</head>
+<body>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="closeCart" aria-label="Close cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <p class="cart-total">Total: <span id="cartTotal">$0.00</span></p>
+            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+
+    <header class="hero about-hero">
+        <div class="navbar">
+            <p>Coffee</p>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="nav-link" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Coffee</a></li>
+                    <li><a href="menu.html#bakery">Bakery</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-icons">
+                <button class="cart-icon-btn" id="cartToggle" aria-label="Open cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+        <div class="header-container">
+            <div class="hdr-container-inner">
+                <p>About Us</p>
+                <h2>Rooted in the craft, brewed with care.</h2>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-story">
+        <div class="story-text reveal">
+            <span class="eyebrow">Our Story</span>
+            <h1>From one cart to a corner everyone knows</h1>
+            <p>We started in 2015 with a single espresso cart and a stubborn belief that a good cup shouldn't be complicated. Today we roast in small batches, source directly from four regions, and still pull every shot by hand — no shortcuts, just better coffee.</p>
+            <p>Every bean on our shelf is picked for what it tastes like in the cup, not just what it costs. That's the whole philosophy, really.</p>
+        </div>
+        <div class="story-image reveal">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Barista preparing coffee">
+        </div>
+    </section>
+
+    <section class="stats-bar">
+        <div class="stat reveal">
+            <h3>2015</h3>
+            <p>Founded</p>
+        </div>
+        <div class="stat reveal">
+            <h3>4</h3>
+            <p>Bean origins</p>
+        </div>
+        <div class="stat reveal">
+            <h3>50k+</h3>
+            <p>Cups served yearly</p>
+        </div>
+        <div class="stat reveal">
+            <h3>3</h3>
+            <p>Store locations</p>
+        </div>
+    </section>
+
+    <section class="about-values">
+        <h1>What We Stand For</h1>
+        <div class="values-group">
+            <div class="value-card reveal">
+                <i class="fa-solid fa-seedling"></i>
+                <h4>Direct Sourcing</h4>
+                <p>We buy straight from growers in Cambodia, Ethiopia, Colombia, and Vietnam, paying fair prices for beans we're proud to roast.</p>
+            </div>
+            <div class="value-card reveal">
+                <i class="fa-solid fa-mug-hot"></i>
+                <h4>Small-Batch Roasting</h4>
+                <p>Every batch is roasted in-house, in small quantities, so every bag is fresh when it reaches your cup.</p>
+            </div>
+            <div class="value-card reveal">
+                <i class="fa-solid fa-people-group"></i>
+                <h4>Community First</h4>
+                <p>Our shops are built as a place to sit, work, and talk — not just to grab a cup and go.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <h1>Meet the Team</h1>
+        <div class="team-group">
+            <div class="team-card reveal">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Head roaster">
+                <h4>Sokha Meas</h4>
+                <p>Head Roaster</p>
+            </div>
+            <div class="team-card reveal">
+                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=400&q=80" alt="Head barista">
+                <h4>Lina Chan</h4>
+                <p>Head Barista</p>
+            </div>
+            <div class="team-card reveal">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Founder">
+                <h4>Vichet Ung</h4>
+                <p>Founder</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="visit-us">
+        <div class="visit-info reveal">
+            <h1>Come Say Hello</h1>
+            <p><i class="fa-solid fa-location-dot"></i> 12 Riverside Blvd, Phnom Penh, Cambodia</p>
+            <p><i class="fa-solid fa-clock"></i> Mon - Sun, 6:30 AM - 8:00 PM</p>
+            <p><i class="fa-solid fa-phone"></i> +855 12 345 678</p>
+            <a href="menu.html" class="visit-btn">View Menu</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-col">
+            <h4>PRIVACY</h4>
+            <ul>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Privacy and policy</a></li>
+                <li><a href="#">Cookie</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>SERVICES</h4>
+            <ul>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Order ahead</a></li>
+                <li><a href="menu.html">Menu</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>ABOUT US</h4>
+            <ul>
+                <li><a href="#">Find a location</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="about.html">Our story</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>INFORMATION</h4>
+            <ul>
+                <li><a href="#">Plan & pricing</a></li>
+                <li><a href="#">Sell your product</a></li>
+                <li><a href="#">Job</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>SOCIAL MEDIA</h4>
+            <div class="link">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
